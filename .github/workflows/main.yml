@@ -15,6 +15,6 @@ jobs:
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
       - name: start my test
-        run: echo "########################################################################################"
+        run: echo "#######################################################################################"
       - name: get url
         run: echo "https://github.com/${{github.repository}}/commit/${{github.sha}}/checks/${{github.run_id}}"
