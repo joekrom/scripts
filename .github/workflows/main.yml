@@ -7,12 +7,14 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
-        #uses: https://github.com/joekrom/hello-world-action/blob/main/action.yml@v1.1
+        #uses: actions/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
+        uses: https://github.com/joekrom/hello-world-javascript-action@e76147da8e5c81eaf017dede5645551d4b94427b
         with:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
+      - name: start my test
+        run: echo "########################################################################################"
       - name: get url
         run: echo "https://github.com/${{github.repository}}/commit/${{github.sha}}/checks/${{github.run_id}}"
