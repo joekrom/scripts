@@ -19,3 +19,9 @@ jobs:
         run: echo "#######################################################################################"
       - name: get url
         run: echo "https://github.com/${{github.repository}}/commit/${{github.sha}}/checks/${{github.run_id}}"
+      - name: create a file
+        run: echo "i am a file" > myfile.txt
+      - name: listing some dir
+        run: |
+          ls -l ${{ github.workspace }}
+          ls -l /opt
