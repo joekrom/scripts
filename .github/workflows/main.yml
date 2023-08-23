@@ -23,3 +23,10 @@ jobs:
         run: |
           ls -l ${{ github.workspace }}
           ls -l /opt
+          mkdir -p /opt/artifacts
+      - name: listing opt dir
+        run: ls -l /opt/
+      - name: move file into artifact
+        run: cp -f myfile.txt /op/artifacts/
+      - name: listing artifacts
+        run: ls -l /opt/
