@@ -27,6 +27,6 @@ jobs:
       - name: listing opt dir
         run: ls -l /opt/
       - name: move file into artifact
-        run: cp -f myfile.txt /op/artifacts/
+        run: cp -f myfile.txt /opt/artifacts/
       - name: listing artifacts
         run: ls -l /opt/
